@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 // import {RequestOptions} from '@angular/common/http';
 @Injectable({
   providedIn: 'root',
@@ -10,18 +10,26 @@ export class RestaurantsService {
     // let options = new RequestOptions({ headers: headers });
 
     return this.httpRequest.get(
-      'https://backend.eizymenu.com/api/home/branch-types',
+      'http://backend.eizymenu.com/api/home/branch-types',
       {
         headers: {
-          // 'Postman-Token': '',
-          // Host: '',
-          // 'User-Agent': 'PostmanRuntime/7.29.0',
-          // Accept: '*/*',
-          // 'Accept-Encoding': 'gzip, deflate, br',
-          // Connection: 'keep-alive',
-          "Authorization":"Bearer"
+          'Accept-language': 'en',
         },
       }
     );
+  }
+  getRestaurants(id: any) {
+    return this.httpRequest.get(
+      `http://backend.eizymenu.com/api/home/restaurants`,
+      {
+        params: new HttpParams().set('branch_type_id', id),
+        headers: {
+          'Accept-language': 'en',
+        },
+    }
+    );
+  }
+  getRestaurantDetails(id:any){
+    return this.httpRequest.get(`https://backend.eizymenu.com/api/restaurant/${id}`,{headers:{'Accept-language': 'en',}})
   }
 }

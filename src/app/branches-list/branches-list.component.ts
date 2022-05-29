@@ -7,17 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./branches-list.component.css'],
 })
 export class BranchesListComponent implements OnInit {
-  branches: any = [];
+  branches:any;
   constructor(private restaurantService: RestaurantsService) {}
   ngOnInit(): void {
     this.restaurantService.getBranches().subscribe(
-      (branch) => {
-        this.branches = branch;
+      (branch:any) => {
+        this.branches = branch.data;
         console.log(branch);
       },
-      (error) => {
-        console.log(error);
-      }
+      // (error) => {
+      //   console.log(error);
+      // }
     );
   }
 }

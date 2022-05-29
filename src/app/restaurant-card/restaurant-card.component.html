@@ -1,0 +1,21 @@
+<div class="card " style="display:flex; justify-content:center ;"  >
+  <img [src]="restaurant.logo"  class="card-img-top" alt="..." />
+  <div class="card-body">
+    <h5 class="card-title">
+      <span class="text-danger">Name :</span>{{ restaurant.branch_type_name}}
+    </h5>
+    <h5 class="card-text">
+      <span class="text-danger">Category: </span>{{ restaurant.name }}
+    </h5>
+    <div class="d-grid gap-2">
+      <button
+        class="btn"
+        style="background-color: orange; font-weight: 900 ;font-size: large;"
+        type="button"
+        (click)="goToRestaurantDetails()"
+      >
+        Show Restaurants Details<i class="fa-solid fa-utensils" style="padding: 10px;"></i>
+      </button>
+    </div>
+  </div>
+</div>

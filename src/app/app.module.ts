@@ -5,17 +5,26 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BranchesListComponent } from './branches-list/branches-list.component';
 import { BranchCardComponent } from './branch-card/branch-card.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatCardModule} from '@angular/material/card';
+import { RestaurantsListComponent } from './restaurants-list/restaurants-list.component';
+import { RestaurantDetailsComponent } from './restaurant-details/restaurant-details.component';
+import { RestaurantCardComponent } from './restaurant-card/restaurant-card.component';
 @NgModule({
   declarations: [
     AppComponent,
     BranchesListComponent,
-    BranchCardComponent
+    BranchCardComponent,
+    RestaurantsListComponent,
+    RestaurantDetailsComponent,
+    RestaurantCardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

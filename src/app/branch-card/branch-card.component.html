@@ -1,8 +1,21 @@
-<div class="card" style="width: 18rem;">
-  <img [src]="branch.image" class="card-img-top" alt="...">
+<div class="card m-5" style="width: 400px">
+  <img [src]="branch.image" class="card-img-top" alt="..." />
   <div class="card-body">
-    <!-- <h5 class="card-title"><span class="text-danger">Name :</span>{{branch.title}}</h5> -->
-    <!-- <p class="card-text"> <span class="text-danger">Category: :</span>{{branch.description}}</p> -->
-    <a  class="btn btn-primary">Show Restaurants</a>
+    <h5 class="card-title">
+      <span class="text-danger">Name :</span>{{ branch.name }}
+    </h5>
+    <h5 class="card-text">
+      <span class="text-danger">Category: :</span>{{ branch.theme_code }}
+    </h5>
+    <div class="d-grid gap-2">
+      <button
+        class="btn"
+        style="background-color: orange; font-weight: 900;font-size: large;"
+        type="button"
+        (click)="goToRestaurants()"
+      >
+        Show Restaurants<i class="fa-solid fa-code-branch" style="padding: 10px;"></i>
+      </button>
+    </div>
   </div>
 </div>

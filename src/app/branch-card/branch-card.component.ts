@@ -1,4 +1,5 @@
 import { Component, OnInit,Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-branch-card',
@@ -7,9 +8,13 @@ import { Component, OnInit,Input } from '@angular/core';
 })
 export class BranchCardComponent implements OnInit {
 @Input() branch:any;
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
+
+  }
+  goToRestaurants(){
+    this.router.navigate(['/restaurants'],{ queryParams: { branch_type_id: `${this.branch.id}` } });
 
   }
 
