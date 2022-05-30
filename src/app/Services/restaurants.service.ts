@@ -13,7 +13,7 @@ export class RestaurantsService {
       'http://backend.eizymenu.com/api/home/branch-types',
       {
         headers: {
-          'Accept-language': 'en',
+          'Accept-language': 'ar',
         },
       }
     );
@@ -24,12 +24,12 @@ export class RestaurantsService {
       {
         params: new HttpParams().set('branch_type_id', id),
         headers: {
-          'Accept-language': 'en',
+          'Accept-language': 'ar',
         },
     }
     );
   }
   getRestaurantDetails(id:any){
-    return this.httpRequest.get(`https://backend.eizymenu.com/api/restaurant/${id}`,{headers:{'Accept-language': 'en',}})
+    return this.httpRequest.get(`https://backend.eizymenu.com/api/restaurant/${id}`,{headers:{'Accept-language': 'ar',}})
   }
 }

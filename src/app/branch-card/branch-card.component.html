@@ -1,16 +1,27 @@
 <div class="card m-5" style="width: 400px">
   <img [src]="branch.image" class="card-img-top" alt="..." />
   <div class="card-body">
-    <h5 class="card-title">
-      <span class="text-danger">Name :</span>{{ branch.name }}
-    </h5>
-    <h5 class="card-text">
-      <span class="text-danger">Category: :</span>{{ branch.theme_code }}
-    </h5>
+    <h1 class="card-title text-center" style=" font-weight: 900;
+      font-size: 3em;
+      color:rgb(132, 16, 16);
+
+      font-family: 'Blaka', cursive;
+      text-shadow: 2px 2px 3px black;">
+      {{ branch.name }}
+    </h1>
+    <!-- <h1 class="card-text text-danger"  style=" font-weight: 900;
+    font-size: 2.5em;
+    color:rgb(108, 29, 29);
+
+    font-family: 'Shrikhand', cursive;
+    text-shadow: 2px 2px 3px black;">
+       {{ branch.count }} <span style="padding: 10px;"> : عدد المطاعم
+
+      </span>   </h1> -->
     <div class="d-grid gap-2">
       <button
         class="btn"
-        style="background-color: orange; font-weight: 900;font-size: large;"
+        style="background-color: orange; font-weight: 900;font-size: large; border-radius: 100px;"
         type="button"
         (click)="goToRestaurants()"
       >

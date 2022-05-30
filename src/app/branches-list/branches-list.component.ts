@@ -1,3 +1,4 @@
+import { Branch } from './../interfaces/branch';
 import { RestaurantsService } from './../Services/restaurants.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./branches-list.component.css'],
 })
 export class BranchesListComponent implements OnInit {
-  branches:any;
+  branches:Branch[]=[];
   constructor(private restaurantService: RestaurantsService) {}
   ngOnInit(): void {
     this.restaurantService.getBranches().subscribe(

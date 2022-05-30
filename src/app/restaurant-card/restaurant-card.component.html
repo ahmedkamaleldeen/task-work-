@@ -1,21 +1,31 @@
 <div class="card " style="display:flex; justify-content:center ;"  >
   <img [src]="restaurant.logo"  class="card-img-top" alt="..." />
   <div class="card-body">
-    <h5 class="card-title">
-      <span class="text-danger">Name :</span>{{ restaurant.branch_type_name}}
-    </h5>
-    <h5 class="card-text">
-      <span class="text-danger">Category: </span>{{ restaurant.name }}
-    </h5>
+    <h1 class="card-title  text-center" style=" font-weight: 900;
+    font-size: 3em;
+    color:red;
+
+    font-family: 'Blaka', cursive;
+    text-shadow: 2px 2px 3px black;">
+     مطعم {{ restaurant.name}}
+    </h1>
+    <h1 class="card-text text-center" style=" font-weight: 900;
+    font-size: 2.5em;
+    color:rgb(138, 65, 65);
+
+    font-family: 'Blaka', cursive;
+    text-shadow: 2px 2px 3px black;">
+    <span style="color: red ;padding: 10px">  العنون: </span>{{ restaurant.country.name }} , {{restaurant.governorate.name}} , {{restaurant.region.name}}
+    </h1>
     <div class="d-grid gap-2">
       <button
         class="btn"
-        style="background-color: orange; font-weight: 900 ;font-size: large;"
+        style="background-color: orange; font-weight: 900 ;font-size: 1.8em;  font-family: 'Blaka', cursive; border-radius: 50px;"
         type="button"
         (click)="goToRestaurantDetails()"
       >
-        Show Restaurants Details<i class="fa-solid fa-utensils" style="padding: 10px;"></i>
-      </button>
+     <i class="fa-solid fa-utensils" style="padding: 10px;"></i>
+     اعرف اكتر</button>
     </div>
   </div>
 </div>

@@ -9,6 +9,8 @@ import { RestaurantsService } from '../Services/restaurants.service';
 })
 export class RestaurantDetailsComponent implements OnInit {
   restaurantItem: any ;
+  stars=[1,2,3,4,5];
+  products:any;
   constructor(
     private activatedRoute: ActivatedRoute,
     private restaurantService: RestaurantsService
@@ -19,7 +21,9 @@ export class RestaurantDetailsComponent implements OnInit {
     // console.log(id);
     this.restaurantService.getRestaurantDetails(id).subscribe((rest: any) => {
       this.restaurantItem = rest.data.restaurant;
-      console.log(rest);
+      this.products=rest.data.menu
+      console.log(this.products);
     });
   }
+
 }

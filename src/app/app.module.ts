@@ -10,6 +10,7 @@ import {MatCardModule} from '@angular/material/card';
 import { RestaurantsListComponent } from './restaurants-list/restaurants-list.component';
 import { RestaurantDetailsComponent } from './restaurant-details/restaurant-details.component';
 import { RestaurantCardComponent } from './restaurant-card/restaurant-card.component';
+import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +18,8 @@ import { RestaurantCardComponent } from './restaurant-card/restaurant-card.compo
     BranchCardComponent,
     RestaurantsListComponent,
     RestaurantDetailsComponent,
-    RestaurantCardComponent
+    RestaurantCardComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

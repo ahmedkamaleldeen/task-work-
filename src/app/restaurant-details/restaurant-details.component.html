@@ -1,4 +1,4 @@
-<div class="card m-5" style="width:110rem ;" >
+<!-- <div class="card m-5" style="width:110rem ;" >
   <img [src]="restaurantItem.logo" style="height:800px" class="card-img-top" alt="..." />
   <div class="card-body">
     <h1 class="card-title">
@@ -8,13 +8,123 @@
       <span class="text-danger">Category: :</span>{{ restaurantItem.theme_code }}
     </h1>
     <div class="d-grid gap-2">
-      <!-- <button
+      <button
         class="btn"
         style="background-color: orange; font-weight: 900"
         type="button"
       >
         Show Restaurants
-      </button> -->
+      </button>
     </div>
+  </div>
+</div> -->
+<h1
+    id="products"
+    class="text-center p-5 my-0"
+    style="
+      font-weight: 900;
+      font-size: 3em;
+      color: brown;
+      background-color: black;
+      font-family: 'Shrikhand', cursive;
+      text-shadow: 2px 2px 3px white;
+    "
+  >
+    This is Our Restaurant Details
+  </h1>
+<div class="container-fluid">
+  <div class="d-flex justify-content-end p-3">
+    <img
+      [src]="restaurantItem.logo"
+      class=""
+      style="width: 100px; height: 100px; border-radius: 50px"
+      alt=""
+    />
+  </div>
+  <div class="d-flex justify-content-end p-3">
+    <h1 style="
+    font-weight: 900;
+    font-size: 2em;
+    color: brown;
+    font-family: 'Shrikhand', cursive;
+    text-shadow: 2px 2px 3px white;
+  ">{{ restaurantItem.name }}</h1>
+  </div>
+  <div class="d-flex justify-content-end">
+    <h3 style="
+    font-weight: 900;
+    font-size: 2em;
+    color: brown;
+    font-family: 'Shrikhand', cursive;
+    text-shadow: 2px 2px 3px white;
+  " >{{ restaurantItem.description }}</h3>
+  </div>
+  <div class="d-flex justify-content-end  " style=" font-weight: 900;
+  font-size: 2em; padding:30px">
+    <i class="fa-solid fa-pen-to-square px-3"></i>
+    <span class="px-3">    تقييم 5000</span>
+    <i class="fa-solid fa-star text-warning " *ngFor="let star of stars"></i>
+  </div>
+</div>
+<!-- <div class="container-fluid" style="background-color: aqua;">
+  <div class="d-flex justify-content-end align-items-center" style="height:20vh">
+    <h1 class="col-4"> قائمة الطعام</h1>
+    <h1 class="col-4">وجبتى المفضلة</h1>
+    <h1 class="col-4">التقييم</h1>
+  </div>
+</div> -->
+<div class="container-fluid bg-info p-3 col-lg-12  d-flex justify-content-around">
+
+  <a
+    style="
+      font-size: 3.5em;
+      color: black;
+      text-decoration: none;
+      font-weight: 900;
+      padding: 30px;
+    text-shadow: 2px 2px 3px red;
+    "
+  >
+    التقييم
+  </a>
+  <a
+    style="
+      font-size: 3.5em;
+      text-decoration: none;
+      font-weight: 900;
+      padding: 30px;
+      color: black;
+      text-shadow: 2px 2px 3px red;
+    "
+  >
+    وجبتى المفضلة
+  </a>
+  <a
+    class="style btn btn-warning trans "
+    style="
+      font-size: 3em;
+      font-weight: 900;
+      text-decoration: none;
+      background-color: orange;
+      padding: 15px;
+      border-radius: 30px;
+      text-shadow: 2px 2px 3px red;
+    "
+  >
+القائمة
+  </a>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4 p-5" *ngFor="let product of products">
+    <div class="card cardStyle" style="width: 18rem">
+      <img [src]="product.image" style="width: 18rem;height:200px" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h1 class="card-title text-center text-danger">{{product.name}}</h1>
+
+        <a class="btn btn-warning" style="border-radius: 50px;"><i class="fa-solid fa-basket-shopping"></i> اطلب الان</a>
+      </div>
+    </div>
+  </div>
   </div>
 </div>

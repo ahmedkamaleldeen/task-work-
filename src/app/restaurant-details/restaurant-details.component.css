@@ -1,0 +1,15 @@
+.trans{
+  transition: 1s;
+}
+.trans:hover{
+  transform: scale(1.1);
+  color: blueviolet;
+}
+.cardStyle{
+  transition: 1s;
+  border-radius: 50px;
+  box-shadow: 10px 10px 5px black;
+}
+.cardStyle:hover{
+  transform: scale(1.1);
+}
