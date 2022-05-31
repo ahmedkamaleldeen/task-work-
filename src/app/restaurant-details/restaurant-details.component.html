@@ -19,19 +19,19 @@
   </div>
 </div> -->
 <h1
-    id="products"
-    class="text-center p-5 my-0"
-    style="
-      font-weight: 900;
-      font-size: 3em;
-      color: brown;
-      background-color: black;
-      font-family: 'Shrikhand', cursive;
-      text-shadow: 2px 2px 3px white;
-    "
-  >
-    This is Our Restaurant Details
-  </h1>
+  id="products"
+  class="text-center p-5 my-0"
+  style="
+    font-weight: 900;
+    font-size: 3em;
+    color: brown;
+    background-color: black;
+    font-family: 'Shrikhand', cursive;
+    text-shadow: 2px 2px 3px white;
+  "
+>
+  This is Our Restaurant Details
+</h1>
 <div class="container-fluid">
   <div class="d-flex justify-content-end p-3">
     <img
@@ -42,28 +42,38 @@
     />
   </div>
   <div class="d-flex justify-content-end p-3">
-    <h1 style="
-    font-weight: 900;
-    font-size: 2em;
-    color: brown;
-    font-family: 'Shrikhand', cursive;
-    text-shadow: 2px 2px 3px white;
-  ">{{ restaurantItem.name }}</h1>
+    <h1
+      style="
+        font-weight: 900;
+        font-size: 2em;
+        color:red;
+        font-family: 'Amiri', serif;
+        text-shadow: 2px 2px 3px white;
+      "
+    >
+      {{ restaurantItem.name }}
+    </h1>
   </div>
-  <div class="d-flex justify-content-end">
-    <h3 style="
-    font-weight: 900;
-    font-size: 2em;
-    color: brown;
-    font-family: 'Shrikhand', cursive;
-    text-shadow: 2px 2px 3px white;
-  " >{{ restaurantItem.description }}</h3>
+  <div class="d-flex justify-content-end ">
+    <h3 class="col-6"
+      style="
+        font-weight: 900;
+        font-size: 2em;
+        color: black;
+        font-family: 'Amiri', serif;
+        text-shadow: 2px 2px 3px white;
+      "
+    >
+      {{ restaurantItem.description }}
+    </h3>
   </div>
-  <div class="d-flex justify-content-end  " style=" font-weight: 900;
-  font-size: 2em; padding:30px">
-    <i class="fa-solid fa-pen-to-square px-3"></i>
-    <span class="px-3">    تقييم 5000</span>
-    <i class="fa-solid fa-star text-warning " *ngFor="let star of stars"></i>
+  <div
+    class="d-flex justify-content-end"
+    style="font-weight: 900; font-size: 2em; padding: 30px"
+  >
+   <a> <i class="fa-solid trans fa-pen-to-square px-3"></i></a>
+    <span class="px-3"> تقييم 5000</span>
+    <i class="fa-solid fa-star text-warning" *ngFor="let star of stars"></i>
   </div>
 </div>
 <!-- <div class="container-fluid" style="background-color: aqua;">
@@ -73,58 +83,72 @@
     <h1 class="col-4">التقييم</h1>
   </div>
 </div> -->
-<div class="container-fluid bg-info p-3 col-lg-12  d-flex justify-content-around">
-
-  <a
+<div
+  class="container-fluid p-3 col-lg-12 d-flex justify-content-around navbar navbar-expand-lg" style="background-color: black"
+>
+  <a class="trans"
     style="
       font-size: 3.5em;
-      color: black;
+      /* color:red; */
       text-decoration: none;
       font-weight: 900;
       padding: 30px;
-    text-shadow: 2px 2px 3px red;
+      font-family: 'Amiri', serif;
+      text-shadow: 2px 2px 3px white;
     "
+    href="#"
   >
     التقييم
   </a>
-  <a
+  <a class="trans"
     style="
       font-size: 3.5em;
       text-decoration: none;
       font-weight: 900;
       padding: 30px;
-      color: black;
-      text-shadow: 2px 2px 3px red;
+      /* color: red; */
+      font-family: 'Amiri', serif;
+      text-shadow: 2px 2px 3px white;
     "
+    href="#"
   >
     وجبتى المفضلة
   </a>
   <a
-    class="style btn btn-warning trans "
+    class="style btn btn-warning trans px-5"
     style="
       font-size: 3em;
       font-weight: 900;
+      color: black;
       text-decoration: none;
-      background-color: orange;
-      padding: 15px;
+      background-color:orange;
+      font-family: 'Amiri', serif;
       border-radius: 30px;
       text-shadow: 2px 2px 3px red;
     "
+
   >
-القائمة
+    القائمة
   </a>
 </div>
 <div class="container">
   <div class="row">
     <div class="col-lg-4 p-5" *ngFor="let product of products">
-    <div class="card cardStyle" style="width: 18rem">
-      <img [src]="product.image" style="width: 18rem;height:200px" class="card-img-top" alt="..." />
-      <div class="card-body">
-        <h1 class="card-title text-center text-danger">{{product.name}}</h1>
+      <div class="card cardStyle">
+        <img
+          [src]="product.image"
+          style=" height: 200px"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h1 class="card-title text-center text-danger" style="font-family: 'Amiri', serif;">{{ product.name }}</h1>
 
-        <a class="btn btn-warning" style="border-radius: 50px;"><i class="fa-solid fa-basket-shopping"></i> اطلب الان</a>
+          <a class="btn btn-warning" style="border-radius: 50px; font-family: 'Amiri', serif;"
+            ><i class="fa-solid fa-basket-shopping"></i> اطلب الان</a
+          >
+        </div>
       </div>
     </div>
-  </div>
   </div>
 </div>

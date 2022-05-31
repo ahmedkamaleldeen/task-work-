@@ -1,5 +1,6 @@
 .trans{
   transition: 1s;
+  color: red;
 }
 .trans:hover{
   transform: scale(1.1);
