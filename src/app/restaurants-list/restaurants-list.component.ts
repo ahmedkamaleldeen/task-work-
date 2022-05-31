@@ -1,3 +1,4 @@
+import { Restaurant } from './../interfaces/restaurant';
 import { RestaurantsService } from './../Services/restaurants.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -8,7 +9,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./restaurants-list.component.css']
 })
 export class RestaurantsListComponent implements OnInit {
-restaurantsList:any;
+restaurantsList:Restaurant[]=[];
 check:boolean=true;
   constructor(private activatedRoute:ActivatedRoute,private restaurantsService:RestaurantsService,private router:Router) { }
 
