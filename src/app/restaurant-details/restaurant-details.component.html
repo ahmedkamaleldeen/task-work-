@@ -46,7 +46,7 @@
       style="
         font-weight: 900;
         font-size: 2em;
-        color:red;
+        color: red;
         font-family: 'Amiri', serif;
         text-shadow: 2px 2px 3px white;
       "
@@ -54,8 +54,9 @@
       {{ restaurantItem.name }}
     </h1>
   </div>
-  <div class="d-flex justify-content-end ">
-    <h3 class="col-6"
+  <div class="d-flex justify-content-end">
+    <h3
+      class="col-6"
       style="
         font-weight: 900;
         font-size: 2em;
@@ -71,7 +72,7 @@
     class="d-flex justify-content-end"
     style="font-weight: 900; font-size: 2em; padding: 30px"
   >
-   <a> <i class="fa-solid trans fa-pen-to-square px-3"></i></a>
+    <a> <i class="fa-solid trans fa-pen-to-square px-3"></i></a>
     <span class="px-3"> تقييم 5000</span>
     <i class="fa-solid fa-star text-warning" *ngFor="let star of stars"></i>
   </div>
@@ -84,9 +85,11 @@
   </div>
 </div> -->
 <div
-  class="container-fluid p-3 col-lg-12 d-flex justify-content-around navbar navbar-expand-lg" style="background-color: black"
+  class="container-fluid p-3 col-lg-12 d-flex justify-content-around navbar navbar-expand-lg"
+  style="background-color: black"
 >
-  <a class="trans"
+  <a
+    class="trans"
     style="
       font-size: 3.5em;
       /* color:red; */
@@ -100,7 +103,8 @@
   >
     التقييم
   </a>
-  <a class="trans"
+  <a
+    class="trans"
     style="
       font-size: 3.5em;
       text-decoration: none;
@@ -121,12 +125,11 @@
       font-weight: 900;
       color: black;
       text-decoration: none;
-      background-color:orange;
+      background-color: orange;
       font-family: 'Amiri', serif;
       border-radius: 30px;
       text-shadow: 2px 2px 3px red;
     "
-
   >
     القائمة
   </a>
@@ -135,16 +138,24 @@
   <div class="row">
     <div class="col-lg-4 p-5" *ngFor="let product of products">
       <div class="card cardStyle">
-        <img
-          [src]="product.image"
-          style=" height: 200px"
-          class="card-img-top"
-          alt="..."
-        />
+        <a  routerLink="" (click)="getProductDetails(product.name)">
+          <img
+            [src]="product.image"
+            style="height: 200px"
+            class="card-img-top"
+            alt="..."
+        /></a>
         <div class="card-body">
-          <h1 class="card-title text-center text-danger" style="font-family: 'Amiri', serif;">{{ product.name }}</h1>
+          <h1
+            class="card-title text-center text-danger"
+            style="font-family: 'Amiri', serif"
+          >
+            {{ product.name }}
+          </h1>
 
-          <a class="btn btn-warning" style="border-radius: 50px; font-family: 'Amiri', serif;"
+          <a
+            class="btn btn-warning"
+            style="border-radius: 50px; font-family: 'Amiri', serif"
             ><i class="fa-solid fa-basket-shopping"></i> اطلب الان</a
           >
         </div>

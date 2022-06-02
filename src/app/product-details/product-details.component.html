@@ -1,0 +1,47 @@
+<h1
+  id="products"
+  class="text-center p-5 my-0"
+  style="
+    font-weight: 900;
+    font-size: 3em;
+    color: brown;
+    background-color: black;
+    font-family: 'Shrikhand', cursive;
+    text-shadow: 2px 2px 3px white;
+  "
+>
+  This is Our Products
+</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-4" *ngFor="let product of productDetails">
+      <div class="card cardStyle">
+        <a  routerLink="">
+          <img
+            [src]="product.icon"
+            style="height: 200px"
+            class="card-img-top"
+            alt="..."
+        /></a>
+        <div class="card-body">
+          <h1
+            class="card-title text-center "
+            style="font-family: 'Amiri', serif"
+          >
+           <span class="text-danger">productName:</span> {{ product.name }}
+          </h1>
+          <h1
+          class="card-title text-center"
+          style="font-family: 'Amiri', serif"
+        >
+        <span class="text-danger">productPrice:</span>  {{ product.price|coin}}
+        </h1>
+          <a
+            class="btn btn-warning"
+            style="border-radius: 50px; font-family: 'Amiri', serif"
+            ><i class="fa-solid fa-basket-shopping"></i> اطلب الان</a
+          >
+        </div>
+    </div>
+  </div>
+</div>

@@ -1,3 +1,4 @@
+import { ProductDetailsComponent } from './product-details/product-details.component';
 import { RestaurantDetailsComponent } from './restaurant-details/restaurant-details.component';
 import { RestaurantsListComponent } from './restaurants-list/restaurants-list.component';
 import { BranchesListComponent } from './branches-list/branches-list.component';
@@ -7,7 +8,8 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   { path: '', component: BranchesListComponent },
   { path: 'restaurants', component: RestaurantsListComponent },
-  {path:"restaurant-details/:restaurant_id",component:RestaurantDetailsComponent}
+  {path:"restaurant-details/:restaurant_id",component:RestaurantDetailsComponent},
+  {path:"productDetails/:name",component:ProductDetailsComponent}
 ];
 
 @NgModule({
